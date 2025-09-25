@@ -19,6 +19,27 @@ def isSkipSigning() {
     return hasProperty('skipSigning') && project.property('skipSigning').toString().toBoolean()
 }
 
+def hasNonEmptyProperty(String name) {
+    def value = project.findProperty(name)
+    return value != null && value.toString().trim()
+}
+
+def hasSigningCredentials() {
+    return hasNonEmptyProperty('signing.gnupg.keyName') ||
+        (hasNonEmptyProperty('signing.keyId') && hasNonEmptyProperty('signing.password') && hasNonEmptyProperty('signing.secretKeyRingFile')) ||
+        (hasNonEmptyProperty('signingKey') && hasNonEmptyProperty('signingPassword'))
+}
+
+def isSigningEnabled() {
+    if (isSkipSigning()) {
+        return false
+    }
+    if (project.hasProperty('enableSigning')) {
+        return project.property('enableSigning').toString().toBoolean() && hasSigningCredentials()
+    }
+    return false
+}
+
 afterEvaluate { project ->
     publishing {
         publications {
@@ -72,14 +93,14 @@ afterEvaluate { project ->
     }
 
     signing {
-        if (!isSkipSigning()) {
+        if (isSigningEnabled()) {
             if (project.hasProperty('useGpgCmd') && project.property('useGpgCmd').toString().toBoolean()) {
                 useGpgCmd()
             }
             required { isReleaseBuild() }
             sign publishing.publications.maven
         } else {
-            logger.lifecycle('Skipping PGP signing because -PskipSigning=true')
+            logger.lifecycle('Skipping PGP signing because key material is not configured or signing was not explicitly enabled (-PenableSigning=true)')
         }
     }
 
