@@ -1,6 +1,6 @@
 <!-- JITPACK BADGES:START -->
 [![JitPack Latest](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization)
-[![Build for latest tag (v5.1.0)](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization/v5.1.0.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization/v5.1.0)
+[![Build for latest tag (v5.1.1)](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization/v5.1.1.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization/v5.1.1)
 [![master-SNAPSHOT](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization/master-SNAPSHOT.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization/master-SNAPSHOT)
 <!-- JITPACK BADGES:END -->
 
