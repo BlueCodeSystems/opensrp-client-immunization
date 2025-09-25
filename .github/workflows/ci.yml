@@ -30,7 +30,7 @@ jobs:
         run: ./gradlew :opensrp-immunization:jacocoTestReport --stacktrace
 
       - name: Generate Javadoc with Gradle
-        run: ./gradlew javadoc --stacktrace
+        run: ./gradlew :opensrp-immunization:javaDocReleaseGeneration --stacktrace
 
       - name: Upload coverage to Coveralls with Gradle
         run: ./gradlew :opensrp-immunization:coveralls --stacktrace
