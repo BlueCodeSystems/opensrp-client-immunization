@@ -23,6 +23,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - _Nothing yet_
 
+## [5.1.1] - 2025-09-25
+----------------------
+
+### Changed
+
+- Keep the README JitPack badges in sync with a managed block
+
+### Build
+
+- Require `-PenableSigning=true` and signing credentials before running PGP signing to avoid missing `.asc` artifacts in unsigned environments
+
+### CI/CD
+
+- Run GitHub Actions Gradle checks on Temurin JDK 17 with Gradle caching
+
 ## [5.1.0] - 2025-09-25
 ----------------------
 
