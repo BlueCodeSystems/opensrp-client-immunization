@@ -1,3 +1,8 @@
+<!-- JITPACK BADGES:START -->
+[![JitPack Latest](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization)
+[![master-SNAPSHOT](https://jitpack.io/v/BlueCodeSystems/opensrp-client-immunization/master-SNAPSHOT.svg)](https://jitpack.io/#BlueCodeSystems/opensrp-client-immunization/master-SNAPSHOT)
+<!-- JITPACK BADGES:END -->
+
 # opensrp-client-immunization
 OpenSRP's immunization library delivers reusable Android components for capturing, scheduling, and displaying vaccination services in frontline health applications.
 
